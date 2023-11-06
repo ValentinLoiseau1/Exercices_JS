@@ -36,8 +36,16 @@
 <script type="text/javascript">
     function verifyAge() {
         let age = document.getElementById("age").value;
-
-        // CODE HERE !
+        let message1 = "Vous devez être majeur pour accèder au site !";
+        let message2 = "Bienvenue sur le site";
+        if (age <18)
+        {
+            alert(message1)
+        }
+        else
+        {
+            alert (message2)
+        }
     }
 </script>
 </body>
