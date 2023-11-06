@@ -25,13 +25,13 @@
         Afficher le message
     </button>
 </div>
-
+<!-- JS part -->
 <script type="text/javascript">
-    function displayMessage() {
-        let firstname = document.getElementById("firstname").value;
-        let lastname = document.getElementById("lastname").value;
-        let fullname = firstname + " " + lastname.toUpperCase();
-        let message = "Bonjour " + fullname;
+    function displayMessage() { /* La fonction  */
+        let firstname = document.getElementById("firstname").value;/* Prénom */
+        let lastname = document.getElementById("lastname").value;/* Nom  */
+        let fullname = firstname + "" + lastname.toUpperCase();/* Addition du prénom et nom du client */
+        let message = "Bonjour " + fullname;/* Message client  */
 
         alert(message)
     }
