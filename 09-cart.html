@@ -40,10 +40,80 @@
     const VALID_PROMOTION_CODE = "10POUR100";
 
     function cartValue() {
+        //Ici on récupére l'article selectionné dans la liste déroulante
         let articles = document.getElementById("articles");
         let selectedArticle = articles.options[articles.selectedIndex].value;
 
-        // CODE HERE !
+        //Ici on récupére la valeur entrée dans le champ du code promo
+        let promotion = document.getElementById("promotion");
+        let promotionValue = promotion.value;
+
+        console.log("selectedArticle : "+ selectedArticle); 
+        console.log("promotionValue : "+ promotionValue);
+
+        // Les messages à afficher
+        let messageError = "Veuillez selectionner une formation";
+        let messageFormation30AvecPromo = "La valeur de votre panier est de 27€";
+        let messageFormation30SansPromo = "La valeur de votre panier est de 30€";
+        let messageFormation50AvecPromo = "La valeur de votre panier est de 45€";
+        let messageFormation50SansPromo = "La valeur de votre panier est de 50€";
+
+        /*  Premiére méthode : Avec des conditions IF imbriquées
+        //Premier niveau de condition IF en fonction de l'article selectionné
+        if (selectedArticle == "one")
+        {
+            //second niveau de condition if en fonction de la valeur du champ promotion
+            if (promotionValue == VALID_PROMOTION_CODE)
+            {
+                alert(messageFormation30AvecPromo);
+            }
+            else
+            {
+                alert(messageFormation30SansPromo);
+            }
+        }
+        else if (selectedArticle == "two")
+        {
+            //second niveau de condition if en fonction de la valeur du champ promotion
+            if (promotionValue == VALID_PROMOTION_CODE)
+            {
+                alert(messageFormation50AvecPromo);
+            }
+            else
+            {
+                alert(messageFormation50SansPromo);
+            }
+
+        }
+        else
+        {
+            alert(messageError);
+        }
+        */
+
+        //Seconde méthode : Avec des conditions compléte
+
+        if(selectedArticle == "one" && promotionValue == VALID_PROMOTION_CODE)
+        {
+            alert(messageFormation30AvecPromo);
+        }   
+        else if (selectedArticle == "one")
+        {
+            alert(messageFormation30SansPromo);
+        }
+        else if (selectedArticle == "two" && promotionValue == VALID_PROMOTION_CODE)
+        {
+            alert(messageFormation50AvecPromo);
+        }
+        else if (selectedArticle == "two")
+        {
+            alert(messageFormation50SansPromo);
+        }
+        else
+        {
+            alert(messageError);
+        }
+        
     }
 </script>
 </body>
