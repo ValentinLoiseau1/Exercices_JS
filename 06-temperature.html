@@ -33,11 +33,16 @@
 
     function solidOrLiquid() {
         let temperature = document.getElementById("temperature").value
+        let message1 = "C'est de l'eau liquide !";
+        let message2 = "C'est de la glace !";
 
-        if(température > MELTING_POINT) {
-            alert("C'est de l'eau liquide !");
-        } else {
-            alert("C'est de la glace !")
+        if(temperature <0) /* Determine si la temperature est inférieur a 0 */
+        {
+            alert(message2);
+        } 
+        else 
+        {
+            alert(message1);
         }
     }
 </script>
