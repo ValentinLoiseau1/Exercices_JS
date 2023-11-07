@@ -31,14 +31,38 @@
     </select>
 
     <br/>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary" onclick="convertAndDisplay()">
         Connaître la valeur en USD->EUR ou EUR->USD
     </button>
 </div>
 
 <script type="text/javascript">
-    // 1 EUR = 1.0729 USD
-    // CODE HERE !
+
+    // Fonction principale ( appelé quand appuyé sur le bouton)
+    function convertAndDisplay(){ 
+
+        // 1---> Recupéres la valeur du type de currencie (EUR / USD)
+        let currencies = document.getElementById("currencies"); // Récupération du composant HTML liste déroulante
+        let currenciesValue = currencies.options[currencies.selectedIndex].value; // Récupération de la valeur de la ligne sélectionné dans la liste déroulante
+
+        // 2 Récupération de la valeur du champ texte
+        let moneyValue = document.getElementById("value").value;
+
+        // 3----> Convertir et afficher le bon message en fonction du type de currencie
+        if(currenciesValue == "eur")
+        {
+            //3.1 ---> calculer la valeur en dollar de la valeur donné en euros
+            let valueInDollars = moneyValue * 1.079;
+
+            //3.2 ---> Afficher les valeurs
+            alert(moneyValue + " Euros -> " + valueInDollars.toFixed(2) + " Dollars"); // .toFixed(2) permet d'afficher uniquement 2 chiffre aprés la virgule
+        }
+        else
+        {
+            let valueInEuros = moneyValue * 0.932;
+            alert(moneyValue + " Dollars -> " + valueInEuros.toFixed(2) + " Euros");
+        }
+    }
 </script>
 </body>
 </html>
