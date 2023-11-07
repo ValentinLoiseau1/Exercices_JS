@@ -35,10 +35,35 @@
 
 <script type="text/javascript">
     function primaryColors() {
-        let colors = document.getElementById("colors");
-        let secondaryColor = colors.options[colors.selectedIndex].value;
+        let colors = document.getElementById("colors");/* Recupere toutes les valeurs de couleur / récupére le composant liste déroulante (selectHtml) défini ligne 25-30 */
+        let selectedColor = colors.options[colors.selectedIndex].value; /* Récupere la valeur actuellement selectionnée dans la liste déroulante */
 
-        // CODE HERE !
+        // Affichage de control pour debug
+        console.log("colors : "+ colors); 
+        console.log("selectedColor : "+ selectedColor);
+
+        // Définir les messages pour affichage
+        let messageViolet = "Le violet est composé de bleu et de rouge";
+        let messageVert = "Le vert est composé de jaune et de bleu";
+        let messageOrange = "Le orange est composé de jaune et de rouge";
+        let messageError = "Veuillez selectionné une couleur";
+
+        //Test de la couleur selectionné et affichage du message adéquat en fonction et affichage dans une alerte pop-up
+        if(selectedColor == "purple") 
+        {
+            alert(messageViolet);
+        } 
+        else if(selectedColor == "green")
+        {
+            alert(messageVert);
+        }
+        else if (selectedColor == "orange")
+        {
+            alert(messageOrange);
+        }
+        else{
+            alert(messageError);
+        }
     }
 </script>
 </body>
