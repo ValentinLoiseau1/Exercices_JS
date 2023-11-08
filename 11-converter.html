@@ -43,7 +43,8 @@
 
         // 1---> Recupéres la valeur du type de currencie (EUR / USD)
         let currencies = document.getElementById("currencies"); // Récupération du composant HTML liste déroulante
-        let currenciesValue = currencies.options[currencies.selectedIndex].value; // Récupération de la valeur de la ligne sélectionné dans la liste déroulante
+        let currenciesValue = currencies.options[currencies.selectedIndex].value; 
+        // Récupération de la valeur de la ligne sélectionné dans la liste déroulante
 
         // 2 Récupération de la valeur du champ texte
         let moneyValue = document.getElementById("value").value;
@@ -55,7 +56,8 @@
             let valueInDollars = moneyValue * 1.079;
 
             //3.2 ---> Afficher les valeurs
-            alert(moneyValue + " Euros -> " + valueInDollars.toFixed(2) + " Dollars"); // .toFixed(2) permet d'afficher uniquement 2 chiffre aprés la virgule
+            alert(moneyValue + " Euros -> " + valueInDollars.toFixed(2) + " Dollars"); 
+            // .toFixed(2) permet d'afficher uniquement 2 chiffre aprés la virgule
         }
         else
         {

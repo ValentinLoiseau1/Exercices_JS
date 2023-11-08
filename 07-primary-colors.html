@@ -35,8 +35,11 @@
 
 <script type="text/javascript">
     function primaryColors() {
-        let colorSelector = document.getElementById("colors");/* Recupere toutes les valeurs de couleur / récupére le composant liste déroulante (selectHtml) défini ligne 25-30 */
-        let selectedColor = colorSelector.options[colorSelector.selectedIndex].value; /* Récupere la valeur actuellement selectionnée dans la liste déroulante */ 
+        let colorSelector = document.getElementById("colors");/* Recupere toutes les valeurs de couleur 
+        // récupére le composant liste déroulante (selectHtml) défini ligne 25-30 */
+
+        let selectedColor = colorSelector.options[colorSelector.selectedIndex].value; 
+        // Récupere la valeur actuellement selectionnée dans la liste déroulante
         // .options permet de chercher dans les options de la liste déroulante a l'aide de l'index selectionné (colorSelector.selectedIndex)
         // .value permet de recupérer la valeur de l'option ainsi retrouvée.
 
