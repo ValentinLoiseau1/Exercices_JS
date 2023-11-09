@@ -36,8 +36,10 @@
 <script type="text/javascript">
     function evenOrOdd() {
     let number = document.getElementById("number").value;
+
     let message1 = "Nombre pair";
     let message2 = "Nombre impair";
+
     if (number%2 == 0) /* Determine si le nombre rentré par le client est un multiple de 2 */
     {
         alert (message1);
@@ -47,6 +49,20 @@
         alert (message2);
     }
     }
+
+    /*    Correctif
+    
+    
+    if (number%2 == 0) /* Determine si le nombre rentré par le client est un multiple de 2 
+    {
+        alert (number + " est pair");
+    }
+     else
+    {
+        alert (number + " est impair");
+    }
+   
+    */
 </script>
 </body>
 </html>
