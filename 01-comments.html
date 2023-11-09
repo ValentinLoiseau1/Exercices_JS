@@ -28,12 +28,13 @@
 <!-- JS part -->
 <script type="text/javascript">
     function displayMessage() { // La fonction  //
-        let firstname = document.getElementById("firstname").value;// Ne pas oublier l'espace lors de la concanétation //
+        // Récupération de la valeur de l'imput text aillant pour ID firstname //
+        let firstname = document.getElementById("firstname").value;
         let lastname = document.getElementById("lastname").value;// Nom  //
         // On met le nom de famille en majuscule grace a la methode tuUpperCase (), 
         //afin de respecter un standard de notre base de donnée 
         let fullname = firstname + "" + lastname.toUpperCase();
-        let message = "Bonjour " + fullname;
+        let message = "Bonjour " + fullname; // ("Bonjour "+ fullname); marche aussi
 
         alert(message)
     }
